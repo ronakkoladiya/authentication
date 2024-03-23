@@ -30,7 +30,7 @@ const bgGradient = {
     mixBlendMode: 'multiply',
 };
 
-function AuthWrapper({children}) {
+function AuthWrapper({ children, title }) {
     return (
         <>
             <section className="flex flex-col md:flex-row bg-[#121212]" style={bgGradient}>
@@ -41,7 +41,13 @@ function AuthWrapper({children}) {
                 </div>
 
                 <div className="w-full md:max-w-xl lg:w-1/2 md:mx-auto xl:w-1/3 p-6 lg:p-16 xl:p-12 min-h-screen block lg:flex items-center">
-                    {children}
+                    <div className="w-full text-white my-6 lg:my-0">
+                        <div className="flex justify-center">
+                            <img src="./Assets/logo.png" alt="" className="w-[200px] mb-0 lg:mb-5" />
+                        </div>
+                        <h1 className="text-3xl md:text-[40px] font-bold leading-tight mt-12 cursor-default text-indigo-500">{title || "No Title!"}</h1>
+                        {children}
+                    </div>
                 </div>
             </section>
         </>

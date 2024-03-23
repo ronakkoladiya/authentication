@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PiEyeClosed, PiEye  } from "react-icons/pi";
+import { PiEyeClosed, PiEye } from "react-icons/pi";
 
 function InputField({
     label,
